@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "107ce69f-44c2-40c5-9667-ad333c60d7f4",
+		"name": "Qeto-SmartContract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9057946"
+	},
+	"item": [
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get Store Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/store/2/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"store",
+								"2",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upsert Store Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"storeId\": 2,\n    \"productQualityStars\": 1,\n    \"customerAttentionStars\": 1,\n    \"waitingTimeStars\": 2,\n    \"averageStars\": 2,\n    \"comments\": \"Mal puesto , mala atencion...\",\n    \"userId\": 1,\n    \"fullName\": \"YeiLinux\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/store/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"store",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upsert Product Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": 2,\n    \"platformProductPrice\": 5,\n    \"realProductPrice\": 3,\n    \"dateTime\": \"23/06/2024\",\n    \"userId\": 1,\n    \"fullName\": \"YeiLinux\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/product/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"product",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/product/2/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"product",
+								"2",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupons",
+			"item": [
+				{
+					"name": "Get Coupons By User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/user/1/get-tokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"user",
+								"1",
+								"get-tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Coupons",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cupon 002\",\n    \"description\": \"Cupon dos\",\n    \"media\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNarFFKTF3w5VlL2BC7gr6gt6K-gvIHjaKiw&s\",\n    \"reference\": \"Token PDF Details\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/smartapi/v1/user/generate-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"smartapi",
+								"v1",
+								"user",
+								"generate-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
